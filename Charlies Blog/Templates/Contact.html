@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary h-100">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <h2>Nutri-Fruit</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item">
+                        <a class="nav-link fs-10 ms-3" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-10 ms-3" aria-current="page" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-10 ms-3" aria-current="page" href="/contact">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link fs-10 ms-3" aria-current="page" href="/services">Services</a> -->
+                    </li>
+                </ul>
+                <div class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" id="liveAlertBtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="liveAlertPlaceholder"></div>
+    </div>
+    <form action="/namuna" method="post">
+    <div class="container my-5 d-flex justify-content-between align-items-center">
+        <div class="left w-100">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email-Address"
+                    name="email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Messgae</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+            </div>
+            <button class="btn btn-primary" id="submit-btn">Send Message</button>
+        </div>
+        </form>
+        <div class="right mx-5">
+            <h5 class="left my-5">Contact US</h5>
+            <h3>Thank you for your interest in <b class="text-success">Nutri-Fruit</b>. We look forward to connecting
+                with you soon!</h3>
+            <p class="left mb-5">We're here to help you cultivate a deeper appreciation for fruits and make informed
+                choices for a healthier lifestyle. Whether you have questions, suggestions, or simply want to share your
+                love for fruits, we'd love to hear from you!</p>
+        </div>
+    </div>
+
+    <!-- https://source.unsplash.com/random/400x400/?snacks -->
+
+    <!-- footer for the website  -->
+    <div class="container my-5">
+        <div class="card text-center">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Special title treatment</h3>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-body-secondary">
+                2 days ago
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+      
+        alertPlaceholder.append(wrapper)
+      }
+      
+      const alertTrigger = document.getElementById('liveAlertBtn')
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          appendAlert('Sorry! Search is not working right now', 'danger')
+        })
+      }
+          </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script>
+            let submit_btn = document.querySelector('#submit-btn');
+
+            submit_btn.addEventListener('click',()=>{
+                confirm('Do You Want To Send This Message?')
+            })
+
+        </script>
+</body>
+
+</html>

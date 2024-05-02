@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary h-100">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <h2>Nutri-Fruit</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0 ms-5">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5 ms-3" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 ms-3" aria-current="page" href="/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 ms-3" aria-current="page" href="/">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 ms-3" aria-current="page" href="/">Services</a>
+                    </li>
+                </ul>
+                <div class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" id="liveAlertBtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="liveAlertPlaceholder"></div>
+    </div>
+
+    <!-- carousel images  -->
+    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1635486685991-4e58e7190fb2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8YXBwbGV8fHx8fHwxNzEzNzI5Njk2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Facts About Fruits.</h3>
+                    <p>Apples are a good source of fiber and vitamin C. As you take a bite of one, do you notice a sweet
+                        smell? Apples, pears, cherries, and plums are just some of the fruits that come from the same
+                        family tree as the rose.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1581375303816-4a17124934f7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bWFuZ298fHx8fHwxNzEzNzI5ODQx&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Healthy Fruits.</h3>
+                    <p>Not all oranges are orange.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1620862657910-8d2b6ab4659b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8c3RyYXdiZXJyeXx8fHx8fDE3MTM3Mjk5MTg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Seasonal Fruits.</h3>
+                    <p>Bananas are berries, but strawberries aren't.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <h1 class="my-5">Mangoes make everything better, especially you.</h1>
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x300/?mango" class="card-img-top" alt="..." style="height: 272px;width: 544px; background-color: rgba(128, 128, 128, 0.329);">
+                    <div class="card-body">
+                        <h5 class="card-title">Mangoes are as diverse as apples or plums</h5>
+                        <p class="card-text">There are hundreds and hundreds of varieties of mango, regional and distinct. Some creamy...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x300/?mangos" class="card-img-top" alt="..." style="height: 272px;width: 544px; background-color: rgba(128, 128, 128, 0.329);">
+                    <div class="card-body">
+                        <h5 class="card-title">The name “mango” originated in India</h5>
+                        <p class="card-text">The English name mango is likely derived from the Tamil word mankay or Keralan word mang...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x300/?mango" class="card-img-top" alt="..." style="height: 272px;width: 544px; background-color: rgba(128, 128, 128, 0.329);">
+                    <div class="card-body">
+                        <h5 class="card-title">Mangoes are majorly good for you</h5>
+                        <p class="card-text">One cup of mango contains about 60 mg of vitamin C. The NHS website recommends that adult...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/600x300/?mangos" class="card-img-top" alt="..." style="height: 272px;width: 544px; background-color: rgba(128, 128, 128, 0.329);">
+                    <div class="card-body">
+                        <h5 class="card-title">Mangoes were first grown in India over 5,000 years ago</h5>
+                        <p class="card-text">The wild mango is thought to have originated in the foothills of the Himalayas in India...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal-1 -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mangoes are as diverse as apples or plums</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/600x300/?mango" class="card-img-top" alt="..." >
+                    <p>
+                        There are hundreds and hundreds of varieties of mango, regional and distinct. Some creamy and sweet, some citrusy, some a bit hot, some like pineapple and some – often found in our supermarkets – just a bit bland. It’s worth seeking out the sweeter varieties if you can: give the Alphonso a try.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">The name “mango” originated in India</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/600x300/?mangos" class="card-img-top" alt="..." >
+                    <p>The English name mango is likely derived from the Tamil word mankay or Keralan word mangga. When Portuguese traders settled in Southern India, they adopted the name as manga. It was as the British were trading with South India in the 15th and 16th Centuries that the word mango was born.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-3 -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mangoes are majorly good for you</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/600x300/?mango" class="card-img-top" alt="..." >
+                    <p>One cup of mango contains about 60 mg of vitamin C. The NHS website recommends that adults aged 19-64 years old need 40mg of vitamin C a day! And the health benefits don’t stop there. Mangoes contain over twenty different vitamins and minerals: they are high in vitamin A, potassium, folate – and also provide a solid serving of fibre. Guilt-free feasting!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal-4 -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mangoes were first grown in India over 5,000 years ago</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/random/600x300/?mangos" class="card-img-top" alt="..." >
+                    <p>The wild mango is thought to have originated in the foothills of the Himalayas in India and Myanmar. The first known cultivation of the fruit was around 5,000 years ago in Southern India, Myanmar, and the Andaman Islands (an archipelago in the Bay of Bengal).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- https://source.unsplash.com/random/400x400/?snacks -->
+
+    <!-- footer for the website  -->
+    <div class="container my-5">
+        <div class="card text-center">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Special title treatment</h3>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-body-secondary">
+                2 days ago
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          '</div>'
+        ].join('')
+      
+        alertPlaceholder.append(wrapper)
+      }
+      
+      const alertTrigger = document.getElementById('liveAlertBtn')
+      if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+          appendAlert('Sorry! Search is not working right now', 'danger')
+        })
+      }
+          </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
